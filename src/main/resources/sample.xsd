@@ -1,0 +1,43 @@
+<xsd:schema targetNamespace="http://www.mcb.com.br/XSD/v1.0" elementFormDefault="qualified" xmlns:xsd ="http://www.w3.org/2001/XMLSchema"> 
+
+<xsd:simpleType name="OrigemRequisicaoType">
+	<xsd:restriction base="xsd:string">
+	<xsd:maxLength value="10"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="NomeType">
+	<xsd:restriction base="xsd:string">
+	<xsd:maxLength value="50"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="EnderecoType">
+	<xsd:restriction base="xsd:string">
+	<xsd:maxLength value="100"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="CidadeType">
+	<xsd:restriction base="xsd:string">
+	<xsd:maxLength value="55"/>
+	</xsd:restriction>
+</xsd:simpleType>
+
+
+  
+   <xsd:complexType name="DataResponseType">
+      <xsd:sequence>
+        <xsd:element name="InserirContatoContaResponse" maxOccurs="1" minOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Codigo"   type="xsd:string" maxOccurs="1" minOccurs="1" />
+              <xsd:element name="Mensagem" type="xsd:string" maxOccurs="1" minOccurs="1" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema> 
+    
